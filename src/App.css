@@ -2,37 +2,138 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body {
+  font-family: 'nanumsquare';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.orange-nav {
+  background-color: coral;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.navigateToBlog {
+  background-color: white;
+  color: coral;
+  border: 2px solid coral;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s, color 0.3x; /* 전환 효과 설정 */
+}
+
+.navigateToBlog:hover {
+  background-color: coral;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.converter {
+  margin: 20px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.converter input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.converter button {
+  background-color: coral;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.converter button:hover {
+  background-color: darkorange;
+}
+
+.navigateToPaceCalculator {
+  background-color: #007bff;
+  color:white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16pxl;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navigateToPaceCalculator:hover{
+  background-color: #0056b3
+}
+
+.marathonOnline button {
+  background-color: coral;
+  color: white;
+  border: none;
+  padding: 10px 20pz;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.marathonOnline button:hover {
+  background-color: darkorange;
+}
+
+.navigateToRef button {
+  background-color: coral;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navigateToRef button:hover {
+  background-color: darkorange;
+}
+
+.list {
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 설정 */
+  transition: transform 0.3s, box-shadow 0.3s; /* 전환 효과 설정 */
+}
+
+.list:hover {
+  transform: translateY(-5px); /* 마우스 오버 시 위로 약간 이동 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 효과 강화 */
+}
+
+.list h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #333;
+}
+
+.list h5 {
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #666;
+}
+
+.list p {
+  font-size: 14px;
+  color: #999;
 }
