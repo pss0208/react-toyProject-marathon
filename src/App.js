@@ -116,19 +116,21 @@ function App() {
         </div>
         <p>@pss</p>
       </div>    
-      <div className="imgae-gallery">
-        <button className='imageBtn' onClick={imageHandler}>이미지</button>
-        <div style={imageStyle}>
-          {images.map((image, index) => (
-            <div key={index} className='card'>
-              <img src={image.src} alt={image.title} className='card-img' />
-              <div className='card-body'>
-                <h5 className='card-title'>{image.title}</h5>
-                <p className='card-text'>{image.description}</p>
+      <div className='list'>
+        <div className="imgae-gallery">
+          <button className='imageBtn' onClick={imageHandler}>이미지</button>
+          <div style={imageStyle}>
+            {images.map((image, index) => (
+              <div key={index} className='card'>
+                <img src={image.src} alt={image.title} className='card-img' />
+                <div className='card-body'>
+                  <h5 className='card-title'>{image.title}</h5>
+                  <p className='card-text'>{image.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>  
+            ))}
+          </div>  
+        </div>
       </div>
     </div>
   );
