@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {images} from './data/image';
 import './App.css';
 
 function App() {
@@ -7,10 +8,11 @@ function App() {
   const [count, setCount] = useState(0); // 클릭 수 저장
   const [speed, setSpeed] = useState(''); // 입력된 속도 저장
   const [pace, setPace] = useState(null); // 계산된 페이스 저장
+  const [isShow, setIsShow] = useState(false) // 이미지 출력 여부 저장
 
-  const func = () => {
-    return 100;
-  };
+  const imageStyle = {
+    display: isShow ? '' : 'none',
+  }
 
   // 클릭 이벤트 핸들러 함수
   const handleClick = () => {
@@ -50,6 +52,10 @@ function App() {
   // 참고한 블로그로 이동하는 함수
   const navigateToRef = () => {
     window.open('https://blog.naver.com/yiyangse/223501718260');
+  };
+
+  const imageHandler = () => {
+    setIsShow(!isShow);
   };
 
   return (
@@ -109,7 +115,21 @@ function App() {
           <button className='navigateToRef' onClick={navigateToRef}>참조 블로그로 이동</button>
         </div>
         <p>@pss</p>
-      </div>      
+      </div>    
+      <div className="imgae-gallery">
+        <button className='imageBtn' onClick={imageHandler}>이미지</button>
+        <div style={imageStyle}>
+          {images.map((image, index) => (
+            <div key={index} className='card'>
+              <img src={image.src} alt={image.title} className='card-img' />
+              <div className='card-body'>
+                <h5 className='card-title'>{image.title}</h5>
+                <p className='card-text'>{image.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>  
+      </div>
     </div>
   );
 }
